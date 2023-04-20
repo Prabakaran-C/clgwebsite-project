@@ -1,0 +1,506 @@
+/* variable declaration */
+:root{
+     --primary:#e52165;
+     --primarylight:#e521665a;
+     --secondary:#0d1137;
+     --secondarylight:#0d1137b6;
+
+}
+/* remove browser styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+li{
+    list-style-type:  none;
+ 
+
+}
+a{
+    text-decoration: none;
+    
+   
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+/* common styles */
+.btn{
+    color: white;
+    display: inline-block;
+    
+    background-color: var(--primary);
+    padding: 10px 10px;
+    transition: 300ms;
+}
+.btn:hover{
+    transform: translatey(-10px);
+}
+
+.flex-design {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+header{
+    min-height: 100vh;
+    background:linear-gradient(rgba(0, 0, 0, 0.596),rgba(0, 0, 0, 0.574)),url("../image/campus.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+
+
+.header-content{
+    /* padding: 2rem 0; */
+    background-color: var(--secondary);
+    height: 10vh;
+    
+   
+}
+.logo {
+    height: 80px;
+}
+
+.nav-links{
+    width: 60%;
+    font-family: 'poppins' , sans-serif;
+}
+.nav-links li{
+    width: 10%;
+}
+
+.nav-links a{
+    color: white;
+}
+
+
+
+/* hover and underline */
+.nav-links li ::after{
+    content: '';
+    display: block;
+    background-color: var(--primary);
+    height: 2px;
+    /* width: 0%; */
+    transform: scaleX(0);
+    transition: transform 300ms;
+}
+.nav-links li:hover ::after{
+    /* width: 100%; */
+    transform: scaleX(1);
+}
+.fa-bars img{
+    width: 80%;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+
+}
+.text-center{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    transition: 200ms;
+}
+.text-center h1{
+    margin: 1.2rem 0;
+}
+
+/* maxwidth */
+.content{
+    max-width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mb{
+    margin-bottom: 3rem;
+}
+.mt{
+    margin-top:5rem ;
+}
+
+.heading{
+    text-align: center;
+    margin-bottom: 2rem;
+
+}
+/* .wwa-content{
+    /* background-color: orange; 
+} */
+.wwa-box{
+    background-color: var(--primary);
+    padding: 20px;
+    margin-left: 10px;
+    text-align: center;
+  
+}
+.wwa-box:first-child{
+    margin-left: 0px;
+}
+.wwa-box h3{
+    margin: 5px;
+}
+.wwa-box:hover{
+    box-shadow: 3px 5px 11px 0px black;
+}
+
+.course_img{
+    position: relative;
+}
+.course_img img{
+    display: block;
+}
+
+.course_img::after {
+    position: absolute;
+    content: '';
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: scale(0,1);
+    transform-origin: right;
+   transition:transform 300ms;
+    background-color: rgba(0, 0, 0, 0.325);
+}
+
+.course:hover .course_img::after{
+    transform: scale(1);
+    transform-origin: left;
+}
+
+.course{
+    position: relative;
+}
+.course_content{
+    position: absolute;
+    top: 40%;
+    right: 50%;
+    left: 20%;
+    bottom: 20%;
+    opacity: 0;
+    transition: translate(-50%,-50%);
+    text-align:center;
+    color: white;
+    font-size: 1.5rem;
+    transition: top 300ms ,opacity 350ms;
+    transition-delay: 200ms;
+}
+
+.course:hover .course_content {
+    top: 30%;
+    opacity: 1;
+
+}
+
+.course-content{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+
+.fac{
+    background-color:var(--primary);
+    margin-bottom: 10px;
+    position: relative;
+}
+.fac-content{
+    display: flex;
+    flex-direction: column;
+    padding: 0 30% 0 5%;
+    align-items:flex-start;
+}
+.fac-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    text-align: center;
+    z-index: -1;
+    transition: z-index 300ms;
+}
+.fac-image img{
+    display: block;
+}
+
+.fac-image{
+    position: relative;
+    left: 20px;
+    padding: 20px;
+    transition: left 800ms;
+}
+.fac:hover .fac-image{
+    left: 80%;
+    transition: left 300ms ,opacity 800ms;
+    
+}
+.fac:hover .fac-image img{
+    box-shadow: 30px 0px 100px 3px black;
+}
+.fac:hover .fac-text{
+    z-index: 1;
+    transition: z-index 700ms;
+}
+.footer-top{
+    background-color: var(--secondary);
+    color: white;
+}
+.footer-links a{
+    color: white;
+}
+.footer-logo {
+    height:80px;
+    width: 80px;
+}
+.footer-bootom{
+    background-color:var(--secondarylight);
+    text-align: center;
+    color: white;
+    padding: 0.2rem;
+}
+.about-us-text{
+    position: relative;
+    padding: 0 2rem;
+}
+
+.about-us-text::after{
+    content: '';
+    position: absolute;
+    inset: -100px 0 0 -100px ;
+    background-image: url("../image/alogo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+.our-student{
+    background-color: var(--secondarylight);
+    padding: 3rem  ;
+    color: white;
+}
+.student{
+    margin-top: 4rem;
+}
+.student-text{
+    line-height: 1.5rem;
+    width: 100%;
+    padding: 2rem;
+}
+.student-img{
+    width: 60%;
+}
+.student:nth-child(even){
+    flex-direction: row-reverse;
+}
+.regeister-now-heading{
+    color: white;
+}
+.register-now{
+    padding: 2rem 0;
+    background-color: var(--primarylight);
+}
+.register-now-content {
+    padding: 0 2rem;
+    text-align: center;
+}
+
+
+/* course table */
+
+.course-table-section{
+    background-color: var(--primarylight);
+    padding: 2rem 0;
+}
+
+.course-table-content{
+    max-width: 600px;
+    
+    text-align: center;
+}
+
+.course-table{
+    width: 100%;
+    border-collapse: collapse;
+    filter: drop-shadow(-10px -10px 25px);
+}
+
+.course-table th , .course-table td {
+    padding: 1rem;
+}
+
+.course-table th {
+    color: var(--secondary);
+    background-color: white;
+}
+
+.course-table tr:nth-child(odd){
+    background-color: var(--secondary);
+    color: white;
+}
+
+.course-table tr:nth-child(even){
+    color: white;
+    background-color: var(--primary);
+}
+.course-table tr a {
+    color: white;
+    text-decoration: none;
+    background-color: green;
+    padding: 6px 10px;
+}
+
+.course-table tr {
+    transition: transform 300ms;
+}
+.course-table tr:not(:first-child):hover {
+    transform: scale(1.01);
+}
+
+/* info center */
+
+.center img {
+    width: 22px;
+    margin-right: 5px; 
+    /* padding-top: 5px; */
+    transition: transform 300ms;
+}
+
+.center :hover img {
+    transform:translate(20px,-15px)  scale(1.1);
+}
+.info-center-content {
+    display:grid;
+    grid-row-gap: 20px;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+
+/* contact */
+input,textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 6px;
+    border:none;
+    border-bottom: 1px solid var(--primarylight) ; 
+}
+
+input:focus ,textarea:focus{
+    border: none;
+    outline: none;
+    color: white;
+    background-color: var(--primarylight);
+    border-bottom: 2px solid var(--primary);
+}
+.form h2 {
+    display: inline-block;
+}
+
+.form h2::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 70%;
+    background-color: var(--primary);
+}
+
+
+/* medaiqueries */
+@media only screen and (max-width:900px)
+{
+    .student,.student:nth-child(even){
+        flex-direction: column;
+    }
+    
+}
+
+@media only screen and (max-width:762px){
+    .footer-top-content{
+        flex-direction: column;
+    }
+    .footer-links{
+        margin-bottom: 1rem;
+    }
+    .footer-college{
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width:920px){
+    .fac:hover .fac-image{
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width:894px){
+    .wwa-content{
+        flex-direction: column;
+    }
+    .wwa-box{
+        margin-left: 0px;
+        margin-top: 15px;
+
+    }
+    .wwa-box:first-child{
+        margin-top: 0px;
+    }
+}
+@media only screen and (max-width:894px) {
+    .text-center{
+        width: 100%;
+    }
+    header{
+        width: 100%;
+    }
+    
+}
+
+@media only screen and (max-width:600px){
+     .nav-links{
+        /* display: none; */
+        position: absolute;
+        flex-direction: column;
+        background-color: var(--secondarylight);
+        right: -10rem;
+        top: 10vh;
+        height: 55vh;
+        width: 0%;
+        padding: 1.5rem 0;
+        transition: all 400ms;
+     }
+     .burger{
+        display: block;
+     }
+     .logo img{
+        position: absolute;
+        top: 1vh;
+        width:50px;
+        left: 1%;
+        height: 50px;
+     }
+}
+
+.nav-show{
+    width: 100%;
+    right:0px;
+}
+
+.textareahide{
+    left: -15rem;
+
+}
